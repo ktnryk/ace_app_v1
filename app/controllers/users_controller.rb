@@ -30,7 +30,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find_by(params[:id])
+    @user = User.find(params[:id])
   end
 
   def update
@@ -65,14 +65,14 @@ class UsersController < ApplicationController
     end
 
     def correct_user
-        @user = User.find_by(params[:id])
+        @user = User.find(params[:id])
         redirect_to(root_url) unless current_user?(@user)
     end
 
     def admin_user
       redirect_to(root_url) unless current_user.admin?
     end
-    
+
 
   end
 end
