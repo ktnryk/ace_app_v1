@@ -1,0 +1,10 @@
+<li id="mobilecamera-<%= mobilecamera.id %>">
+  <span class="cam_name"><%= mobilecamera.cam_name %></span>
+  <span class="connect"><%= mobilecamera.connect %> </span>
+  <span class="batt"><%= mobilecamera.batt %> </span>
+  <span class="charge"><%= mobilecamera.chg %> </span>
+    
+  <span class="timestamp">
+    Registered <%= time_ago_in_words(mobilecamera.created_at) %> ago.
+  </span>
+</li>

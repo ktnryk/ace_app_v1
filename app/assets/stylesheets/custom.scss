@@ -247,3 +247,48 @@ span.image {
     border: 0;
   }
 }
+
+/* mobilecamera */
+
+.mobilecamera {
+
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .cam_name {
+/*    display: block; */
+    margin-left: 10px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .connect {
+    color: $gray-light;
+/*    display: block;
+    margin-left: 60px; */
+  }
+  .batt {
+    color: $gray-light;
+/*    display: block;
+    margin-left: 60px; */
+  }
+  .charge {
+    color: $gray-light;
+/*    display: block;
+    margin-left: 60px; */
+  }
+  .timestamp {
+    color: $gray-light;
+/*    display: block;
+    margin-left: 60px; */
+  }
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+}

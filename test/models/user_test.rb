@@ -72,4 +72,12 @@ test "associated microposts should be destroyed" do
     @user.destroy
   end
 end
+
+test "associated mobilecameras should be destroyed" do
+  @user.save
+  @user.mobilecameras.create!(cam_name: "Lorem ipsum")
+  assert_difference 'Mobilecamera.count', -1 do
+    @user.destroy
+  end
+end
 end

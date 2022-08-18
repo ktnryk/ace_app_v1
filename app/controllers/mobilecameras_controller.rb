@@ -1,0 +1,2 @@
+class MobilecamerasController < ApplicationController
+end

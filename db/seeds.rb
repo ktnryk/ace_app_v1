@@ -30,3 +30,10 @@ users = User.order(:created_at).take(6)
   content = Faker::Lorem.sentence(word_count: 5)
   users.each { |user| user.microposts.create!(content: content) }
 end
+
+# ユーザーの一部を対象にモバイルカメラを生成する
+users = User.order(:created_at).take(6)
+10.times do
+  cam_name = Faker::Lorem.sentence(word_count: 2)
+  users.each { |user| user.mobilecameras.create!(cam_name: cam_name, connect: "connect", batt: 10, chg: true ) }
+end
