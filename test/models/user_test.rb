@@ -80,4 +80,5 @@ test "associated mobilecameras should be destroyed" do
     @user.destroy
   end
 end
+
 end

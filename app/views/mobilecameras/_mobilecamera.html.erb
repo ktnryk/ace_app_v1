@@ -3,8 +3,12 @@
   <span class="connect"><%= mobilecamera.connect %> </span>
   <span class="batt"><%= mobilecamera.batt %> </span>
   <span class="charge"><%= mobilecamera.chg %> </span>
-    
+
   <span class="timestamp">
     Registered <%= time_ago_in_words(mobilecamera.created_at) %> ago.
   </span>
+  <% if current_user?(mobilecamera.user) %>
+    <%= link_to "delete", mobilecamera, method: :delete,
+                                 data: { confirm: "You sure?" } %>
+  <% end %>
 </li>
