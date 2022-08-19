@@ -23,7 +23,7 @@ class MobilecameraTest < ActiveSupport::TestCase
     @mobilecamera.cam_name = "  "
     assert_not @mobilecamera.valid?
   end
-
+  
   test "cam_name should be less than 50 characters" do
     @mobilecamera.cam_name = "a" * 51
     assert_not @mobilecamera.valid?

@@ -6,6 +6,11 @@ class MobilecamerasController < ApplicationController
     @mobilecamera = Mobilecamera.new
   end
 
+  def show
+    @mobilecamera = Mobilecamera.find_by(id: params[:id])
+  end
+
+
   def create
     user = User.find_by(email: params[:mobilecamera][:email])
       if user != nil
